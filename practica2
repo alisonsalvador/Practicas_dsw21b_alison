@@ -1,0 +1,26 @@
+fun main() {
+    // Arreglo de 5 notas enteras que aceptan null (pero aquí todas tienen nota)
+    val notas: Array<Int?> = arrayOfNulls(5)
+
+    // Asignar valores
+    notas[0] = 8
+    notas[1] = 6
+    notas[2] = 7
+    notas[3] = 9
+    notas[4] = 5
+
+    // Calcular suma y promedio
+    var suma = 0
+    for (nota in notas) {
+        suma += nota ?: 0 // como todas tienen valor, no caerá en 0
+    }
+    val promedio = suma / notas.size
+
+    // Mostrar resultados
+    println("Notas de los estudiantes:")
+    for (i in notas.indices) {
+        println("Estudiante ${i + 1} → Nota: ${notas[i]}")
+    }
+
+    println("\nPromedio de las notas: $promedio")
+}
