@@ -1,0 +1,16 @@
+fun main() {
+    fun main() {
+    
+    val pares: MutableList<Int> = mutableListOf()
+
+    for (i in 1..100) {
+        if (i % 2 == 0) {
+            pares.add(i)
+        }
+    }
+
+    println("Números pares entre 1 y 100:")
+    println(pares)
+}
+
+}
